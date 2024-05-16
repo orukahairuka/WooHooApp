@@ -9,7 +9,8 @@ import SwiftUI
 struct HomeView: View {
     @State private var isLarge: Bool = false
 
-    let musicplayer = SoundPlayer()
+    let levelPlayer = LevelSound()
+
     var body: some View {
         VStack{
             Spacer()
@@ -21,7 +22,7 @@ struct HomeView: View {
             Button {
                 isLarge.toggle()
                 if isLarge {
-                    musicplayer.musicPlayer()
+                    levelPlayer.musicPlayer()
                 }
             } label: {
                 ZStack {

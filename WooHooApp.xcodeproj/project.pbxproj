@@ -11,7 +11,7 @@
 		3BEAD69A2BF5F2F700A3DE94 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEAD6992BF5F2F700A3DE94 /* HomeView.swift */; };
 		3BEAD69C2BF5F2F900A3DE94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEAD69B2BF5F2F900A3DE94 /* Assets.xcassets */; };
 		3BEAD69F2BF5F2F900A3DE94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEAD69E2BF5F2F900A3DE94 /* Preview Assets.xcassets */; };
-		3BEAD6A62BF5F5B400A3DE94 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEAD6A52BF5F5B400A3DE94 /* SoundPlayer.swift */; };
+		3BEAD6A62BF5F5B400A3DE94 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEAD6A52BF5F5B400A3DE94 /* Sounds.swift */; };
 		3BEAD6A82BF5F62F00A3DE94 /* LevelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEAD6A72BF5F62F00A3DE94 /* LevelButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,7 +21,7 @@
 		3BEAD6992BF5F2F700A3DE94 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3BEAD69B2BF5F2F900A3DE94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BEAD69E2BF5F2F900A3DE94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3BEAD6A52BF5F5B400A3DE94 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		3BEAD6A52BF5F5B400A3DE94 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		3BEAD6A72BF5F62F00A3DE94 /* LevelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,7 +65,7 @@
 			children = (
 				3BEAD6972BF5F2F700A3DE94 /* WooHooAppApp.swift */,
 				3BEAD6992BF5F2F700A3DE94 /* HomeView.swift */,
-				3BEAD6A52BF5F5B400A3DE94 /* SoundPlayer.swift */,
+				3BEAD6A52BF5F5B400A3DE94 /* Sounds.swift */,
 				3B18E56A2BF60789009DD895 /* Buttons */,
 				3BEAD69B2BF5F2F900A3DE94 /* Assets.xcassets */,
 				3BEAD69D2BF5F2F900A3DE94 /* Preview Content */,
@@ -153,7 +153,7 @@
 			files = (
 				3BEAD69A2BF5F2F700A3DE94 /* HomeView.swift in Sources */,
 				3BEAD6A82BF5F62F00A3DE94 /* LevelButton.swift in Sources */,
-				3BEAD6A62BF5F5B400A3DE94 /* SoundPlayer.swift in Sources */,
+				3BEAD6A62BF5F5B400A3DE94 /* Sounds.swift in Sources */,
 				3BEAD6982BF5F2F700A3DE94 /* WooHooAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
