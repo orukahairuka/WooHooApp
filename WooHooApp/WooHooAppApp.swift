@@ -11,7 +11,7 @@ import SwiftUI
 struct WooHooAppApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            LevelButton()
         }
     }
 }
