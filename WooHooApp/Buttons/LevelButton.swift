@@ -1,17 +1,45 @@
 import SwiftUI
+import AudioToolbox
 
 struct LevelButton: View {
-    let buttonCount = 10 // ボタンの数
+    let buttonCount = 28 // ボタンの数
     @State var animatingButton: Int? = nil // アニメーション中のボタンのインデックス
 
-    //音楽再生
-    let levelPlayer = LevelSound()
-    let buzaPlayer =  BuzaSound()
-    let djPlayer = DjSound()
-    let hajimeiPlayer = HajimeiSound()
+    // 音楽再生
+    let players: [MusicPlayer] = [
+        SoundPlayer(soundType: .level),
+        SoundPlayer(soundType: .buza),
+        SoundPlayer(soundType: .dj),
+        SoundPlayer(soundType: .hajimei),
+        SoundPlayer(soundType: .chanchan),
+        SoundPlayer(soundType: .hakusyu),
+        SoundPlayer(soundType: .yahoo),
+        SoundPlayer(soundType: .buta),
+        SoundPlayer(soundType: .denwanai),
+        SoundPlayer(soundType: .denwanai2),
+        SoundPlayer(soundType: .goukaku),
+        SoundPlayer(soundType: .guaa1),
+        SoundPlayer(soundType: .guaa2),
+        SoundPlayer(soundType: .katana),
+        SoundPlayer(soundType: .kikku),
+        SoundPlayer(soundType: .nigeru),
+        SoundPlayer(soundType: .niwatori),
+        SoundPlayer(soundType: .nogoukaku),
+        SoundPlayer(soundType: .ushi),
+        SoundPlayer(soundType: .uwa1),
+        SoundPlayer(soundType: .washi),
+        SoundPlayer(soundType: .yagi),
+        SoundPlayer(soundType: .jan),
+        SoundPlayer(soundType: .money),
+        SoundPlayer(soundType: .ohoo),
+        SoundPlayer(soundType: .pafu),
+        SoundPlayer(soundType: .role),
+        SoundPlayer(soundType: .typewriter)
+    ]
 
     var body: some View {
         VStack {
+            Spacer()
             ScrollView {
                 Grid (horizontalSpacing: 50, verticalSpacing: 50) {
                     ForEach(0..<buttonCount/2, id: \.self) { rowIndex in
@@ -27,15 +55,9 @@ struct LevelButton: View {
                                         animatingButton = index
                                     }
 
-                                    //音の指定
-                                    if index == 0 {
-                                        levelPlayer.musicPlayer()
-                                    } else if index == 1 {
-                                        buzaPlayer.musicPlayer()
-                                    } else if index == 2 {
-                                        djPlayer.musicPlayer()
-                                    }else {
-                                        hajimeiPlayer.musicPlayer()
+                                    // 音の再生
+                                    if index < players.count {
+                                        players[index].playMusic()
                                     }
 
                                 } label: {
@@ -66,10 +88,13 @@ struct LevelButton: View {
                     }
                 }
             }
+            Spacer()
         }
     }
 }
 
-#Preview {
-    LevelButton()
+struct LevelButton_Previews: PreviewProvider {
+    static var previews: some View {
+        LevelButton()
+    }
 }
