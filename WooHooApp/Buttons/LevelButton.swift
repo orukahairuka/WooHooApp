@@ -40,12 +40,11 @@ struct LevelButton: View {
     var body: some View {
         VStack {
             Spacer()
-            ScrollView {
-                Grid (horizontalSpacing: 50, verticalSpacing: 50) {
-                    ForEach(0..<buttonCount/2, id: \.self) { rowIndex in
+                Grid (horizontalSpacing: 10, verticalSpacing: 3) {
+                    ForEach(0..<buttonCount/4, id: \.self) { rowIndex in
                         GridRow {
-                            ForEach(0..<2) { columnIndex in
-                                let index = rowIndex * 2 + columnIndex
+                            ForEach(0..<4) { columnIndex in
+                                let index = rowIndex * 4 + columnIndex
                                 Button {
                                     if animatingButton == index {
                                         // 同じボタンが連続してタップされた場合は、アニメーションをリセット
@@ -61,9 +60,9 @@ struct LevelButton: View {
                                     }
 
                                 } label: {
-                                    Image(systemName: "star.fill")
-                                        .font(.system(size: 64))
-                                        .foregroundColor(animatingButton == index ? Color.yellow : Color.gray)
+                                    Image(systemName: "music.note")
+                                        .font(.system(size: 90))
+                                        .foregroundColor(animatingButton == index ? Color.orange : Color.gray)
                                         .animation(.easeInOut(duration: 0.5), value: animatingButton == index)
                                         .scaleEffect(animatingButton == index ? 1.0 : 0.4)
                                         .animation(
@@ -87,7 +86,6 @@ struct LevelButton: View {
                         }
                     }
                 }
-            }
             Spacer()
         }
     }
